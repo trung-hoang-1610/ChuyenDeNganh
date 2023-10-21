@@ -151,7 +151,7 @@ public class HomeIndex extends javax.swing.JFrame {
 
         ChucNang cn = new ChucNang();
 
-            cn.nhapDaThucNhieuAn(txtDaThuc1.getText(), txtDaThuc2.getText());
+        cn.nhapDaThucNhieuAn(txtDaThuc1.getText(), txtDaThuc2.getText());
         
 
         txtDaThuc3.setText(cn.showHieu2DaThuc());

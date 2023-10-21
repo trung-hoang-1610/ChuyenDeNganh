@@ -106,8 +106,7 @@ public class DaThuc {
             }else if(newNode.soMu == 1){
                 
                     tongHaiDaThuc += (newNode.heSo + newNode.bien);
-                
-                
+ 
             }else{
                 tongHaiDaThuc+=(newNode.heSo + newNode.bien + "^" + newNode.soMu);
             }

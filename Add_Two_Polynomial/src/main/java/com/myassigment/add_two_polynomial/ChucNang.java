@@ -50,7 +50,7 @@ public class ChucNang {
                 }
 
             }
-            
+
             while (hangTu2 != null) {
                 if (hangTu2 == daThuc2.head) {
                     writer.write("(");
@@ -143,43 +143,43 @@ public class ChucNang {
     }
 
     private static String formatExpression(String expression) {
-        // Xử lý và định dạng biểu thức ở đây.
+        // Xử lý và định dạng biểu thức ở đây
         return expression.trim();
     }
 
     public void nhapDaThucNhieuAn(String daThuc1, String daThuc2) {
 
- 
-          
-            Pattern pattern = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z]+)(\\^\\d+)?");
-            Matcher matcher = pattern.matcher(daThuc1);
+        Pattern pattern = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z]+)(\\^\\d+)?");
+        Matcher matcher = pattern.matcher(daThuc1);
 
-            while (matcher.find()) {
-                String hesoStr = matcher.group(1);
-                String bien = matcher.group(2);
-                String soMuStr = matcher.group(3);
+        while (matcher.find()) {
+            String hesoStr = matcher.group(1);
+            String bien = matcher.group(2);
+            String soMuStr = matcher.group(3);
 
-                int heSo = (hesoStr.isEmpty()) ? 1 : Integer.parseInt(hesoStr);
-                int soMu = (soMuStr == null) ? 1 : Integer.parseInt(soMuStr.substring(1));
-
-                this.daThuc1.themHangTu(heSo, soMu, bien);
+            int heSo = (hesoStr.isEmpty()) ? 1 : Integer.parseInt(hesoStr);
+            int soMu = (soMuStr == null) ? 1 : Integer.parseInt(soMuStr.substring(1));
+            if (bien.isEmpty()) {
+                bien = "1";
             }
+            this.daThuc1.themHangTu(heSo, soMu, bien);
+        }
 
-            
-            Pattern pattern2 = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z1-9]+)(\\^\\d+)?");
-            Matcher matcher2 = pattern2.matcher(daThuc2);
+        Pattern pattern2 = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z1-9]+)(\\^\\d+)?");
+        Matcher matcher2 = pattern2.matcher(daThuc2);
 
-            while (matcher2.find()) {
-                String hesoStr = matcher2.group(1);
-                String bien = matcher2.group(2);
-                String soMuStr = matcher2.group(3);
+        while (matcher2.find()) {
+            String hesoStr = matcher2.group(1);
+            String bien = matcher2.group(2);
+            String soMuStr = matcher2.group(3);
 
-                int heSo = (hesoStr.isEmpty()) ? 1 : Integer.parseInt(hesoStr);
-                int soMu = (soMuStr == null) ? 1 : Integer.parseInt(soMuStr.substring(1));
-
-                this.daThuc2.themHangTu(heSo, soMu, bien);
+            int heSo = (hesoStr.isEmpty()) ? 1 : Integer.parseInt(hesoStr);
+            int soMu = (soMuStr == null) ? 1 : Integer.parseInt(soMuStr.substring(1));
+            if (bien.isEmpty()) {
+                bien = "1";
             }
-     
+            this.daThuc2.themHangTu(heSo, soMu, bien);
+        }
 
     }
 
@@ -190,7 +190,7 @@ public class ChucNang {
         clearCache();
         return tongHaiDaThuc;
     }
-    
+
     public DaThuc tinhHieuDaThuc() {
 
         DaThuc tongHaiDaThuc = daThuc1.truHaiDaThuc(daThuc2);
@@ -220,15 +220,16 @@ public class ChucNang {
     }
 
     public String showTong2DaThuc() {
-        String tong;
+        
         //showDaThuc1();
         //showDaThuc2();
 
         System.out.print("Tong 2 da thuc: ");
-        tong = tinhTongDaThuc().show();
+        
         //System.out.println();
-        return tong;
+        return tinhTongDaThuc().show();
     }
+
     public String showHieu2DaThuc() {
         String tong;
         //showDaThuc1();
