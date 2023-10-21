@@ -64,7 +64,9 @@ public class DaThuc {
         DaThuc TongHaiDaThuc = new DaThuc();
         HangTu DaThuc1 = this.head;
         HangTu DaThuc2 = other.head;
-
+//x + x^4 + x^2 
+//x^2 + x + x^4
+//x^2 + 2x + 2x^4 + x^2
         while(DaThuc1 != null && DaThuc2!= null){
 
             if((DaThuc1.soMu == DaThuc2.soMu) && DaThuc1.bien.equals(DaThuc2.bien) == true){

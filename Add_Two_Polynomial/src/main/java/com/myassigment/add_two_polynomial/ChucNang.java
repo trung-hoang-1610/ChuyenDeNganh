@@ -50,7 +50,7 @@ public class ChucNang {
                 }
 
             }
-
+            
             while (hangTu2 != null) {
                 if (hangTu2 == daThuc2.head) {
                     writer.write("(");
@@ -143,7 +143,7 @@ public class ChucNang {
     }
 
     private static String formatExpression(String expression) {
-        // Xử lý và định dạng biểu thức ở đây
+        // Xử lý và định dạng biểu thức ở đây.
         return expression.trim();
     }
 
@@ -151,7 +151,7 @@ public class ChucNang {
 
  
           
-            Pattern pattern = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z1-9]+)(\\^\\d+)?");
+            Pattern pattern = Pattern.compile("([+-]?\\d*)([-]?[a-zA-Z]+)(\\^\\d+)?");
             Matcher matcher = pattern.matcher(daThuc1);
 
             while (matcher.find()) {

@@ -2,7 +2,6 @@ package com.myassigment.view;
 
 import com.myassigment.add_two_polynomial.ChucNang;
 
-
 public class HomeIndex extends javax.swing.JFrame {
 
     public HomeIndex() {
@@ -151,7 +150,9 @@ public class HomeIndex extends javax.swing.JFrame {
         txtDaThuc3.setVisible(true);
 
         ChucNang cn = new ChucNang();
-        cn.nhapDaThucNhieuAn(txtDaThuc1.getText(), txtDaThuc2.getText());
+
+            cn.nhapDaThucNhieuAn(txtDaThuc1.getText(), txtDaThuc2.getText());
+        
 
         txtDaThuc3.setText(cn.showHieu2DaThuc());
     }//GEN-LAST:event_btnSubActionPerformed

@@ -24,9 +24,9 @@ public class LichSu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        txtLichSu.setEditable(false);
         txtLichSu.setColumns(20);
         txtLichSu.setRows(5);
-        txtLichSu.setEnabled(false);
         jScrollPane2.setViewportView(txtLichSu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
